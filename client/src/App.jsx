@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { MainPanel } from "./Pages";
 
 const App = () => {
-    const api = "http://localhost:8080";
+    const api = import.meta.env.VITE_API_URL;
     const [store, setStore] = useState();
     const [showSearchResult, setShowSearchResult] = useState(false);
     const updateStore = (data) => {
